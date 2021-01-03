@@ -2,23 +2,12 @@
 <html>
 {% include head.html %}
 
-<body class="hack dark">
-    <div class="container">
-        <div class="grid">
-            <main class="cell -12of12">
-                <article class="post">
-                    <header class="post-header">
-                        <h1>
-                            <div style="font-size: 16px">> {{ page.title }}</div>
-                        </h1>
-                    </header>
-                    <div class="post-content">{{ content }}</div>
-                </article>
-            </main>
-        </div>
-        <hr />
-        <p style="text-align: right"><a href="/articles.html">retour</a> </p>
-    </div>
+<body>
+<div>
+	{{ content }}
+</div>
+
+<p style="text-align: right"><a href="/articles.html">retour</a> </p>
 </body>
 
 </html>

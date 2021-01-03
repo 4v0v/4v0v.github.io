@@ -1,5 +1,5 @@
 ---
 layout: post
-title:  "Test"
+title:  "Happy new year."
 ---
 Hello
