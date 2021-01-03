@@ -1,0 +1,13 @@
+<div class="t-hackcss-navigation">
+    <div style="padding-top: 5em;"></div>
+    <nav class="menu">
+      {% assign url = page.url|remove:'index.html' %}
+
+      {% for link in site.navigation %}
+        <a class="menu-item {% if url == link.urlwithouthtml %}active{% endif %}" href="{{ link.url | prepend: site.baseurl }}" >
+          {{ link.text }} <div class="pull-right">»</div>
+        </a>
+      {% endfor %}
+    </nav>
+</div>
+  

@@ -1,0 +1,18 @@
+{% assign mois = page.date | date_to_string | date:  "%b"%}
+{% assign jour = page.date | date_to_string | date:  "%-d"%}
+{% assign annee = page.date | date_to_string | date:  "%Y"%}
+
+{{ jour }}
+{% if mois == "Jan" %} Jan {% endif %}
+{% if mois == "Feb" %} Fev {% endif %}
+{% if mois == "Mar" %} Mar {% endif %}
+{% if mois == "Apr" %} Avr {% endif %}
+{% if mois == "May" %} Mai {% endif %}
+{% if mois == "Jun" %} Jun {% endif %}
+{% if mois == "Jul" %} Jui {% endif %}
+{% if mois == "Aug" %} Aou {% endif %}
+{% if mois == "Sep" %} Sep {% endif %}
+{% if mois == "Oct" %} Oct {% endif %}
+{% if mois == "Nov" %} Nov {% endif %}
+{% if mois == "Dec" %} Dec {% endif %}
+{{ annee }}
