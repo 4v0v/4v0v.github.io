@@ -2,15 +2,17 @@
 <html>
   {% include head.html %}
   <body>
-		<div class="row ">
+		<div class="row mvs">
 			<div class="col-3"></div>
 			<div class="col-6">
-				<h2 class="hcenter">4v0v's website</h2> 
-				<h5 class="hcenter">
-					<a style="color: inherit; text-decoration: inherit;" href="/index">games</a> | 
-					<a style="color: inherit; text-decoration: inherit;" href="/drawings">drawings</a> |
-					<a style="color: inherit; text-decoration: inherit;" href="/contact">contact</a>
-				</h5>
+				<h2 class="hcenter">4v0v's website</h2>
+				<div class="hcenter">
+					<h6>
+						<a class="nav_links" href="/index">index</a> | 
+						<a class="nav_links" href="/drawings">drawings</a> |
+						<a class="nav_links" href="/contact">contact</a>
+					</h6>
+				</div>
 				<hr/>
 				{{ content }}
 				{% include footer.html %}

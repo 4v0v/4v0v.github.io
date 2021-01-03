@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Casse brique et la programmation orientée objet en Lua
+title: Casse brique et POO en Lua
 date: 2019-04-26
 categories: lua
 author: 4v0v
