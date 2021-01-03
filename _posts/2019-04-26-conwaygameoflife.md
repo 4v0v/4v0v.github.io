@@ -8,7 +8,7 @@ author: 4v0v
 
 <center><video autoplay="false" loop="loop" width="512" height="512">
   <!-- <source src="/assets/images/lorenz.mp4" type="video/mp4"> -->
-  <source src="/videos/conway.webm" type="video/webm">
+  <source src="/assets/videos/conway.webm" type="video/webm">
 </video></center>
 
 **Règles:**

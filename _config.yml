@@ -2,6 +2,12 @@ url: ""
 baseurl: ""
 title: "4v0v's website"
 
+defaults:
+  - scope:
+      path: "assets/drawings"
+    values:
+      is_drawing: true
+
 
 # title: 4v0v
 # baseurl: 
