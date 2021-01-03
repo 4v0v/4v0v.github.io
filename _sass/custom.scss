@@ -1,9 +1,16 @@
 * {
-  font-family: 'Courier New', Courier, monospace;
+	font-family: 'Courier New', Courier, monospace;
+	color: white;
+	background-color: black;
 }
 
 .nav_links {
 	color: inherit;
 	text-decoration: none;
 	font-size: 1.5rem;
+}
+
+.nav_links.selected{
+	background-color: white;
+	color: black;
 }

@@ -8,9 +8,12 @@
 				<h2 class="hcenter">4v0v's website</h2>
 				<div class="hcenter">
 					<h6>
-						<a class="nav_links" href="/index">index</a> | 
-						<a class="nav_links" href="/drawings">drawings</a> |
-						<a class="nav_links" href="/contact">contact</a>
+						<a class="nav_links {% if page.url == '/' %} selected {% endif %}" 
+						href="/index">&nbsp;index&nbsp;</a>|<a
+						class="nav_links {% if page.url == '/drawings.html' %} selected {% endif %}" 
+						href="/drawings">&nbsp;drawings&nbsp;</a>|<a
+						class="nav_links {% if page.url == '/contact.html' %} selected {% endif %}" 
+						href="/contact">&nbsp;contact&nbsp;</a>
 					</h6>
 				</div>
 				<hr/>
