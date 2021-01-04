@@ -8,14 +8,15 @@
 	color: inherit;
 	text-decoration: none;
 	font-size: 1.5rem;
+	&.selected{
+		background-color: violet;
+		color: black;
+	}
 }
 
-.nav_links.selected{
-	background-color: violet;
-	color: black;
-}
-
-.post_links:hover {
-	background-color: white;
-	color: black;
+.post_links {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }
