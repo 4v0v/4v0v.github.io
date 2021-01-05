@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% assign devs = site.static_files | where: 'is_dev', true %}
+{% for dev in devs %}
+<center>
+	<img src="{{ dev.path | prepend: site.baseurl }}" >
+</center>
+{% endfor %}

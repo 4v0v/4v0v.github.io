@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% assign arts = site.static_files | where: 'is_art', true %}
+{% for art in arts %}
+<center>
+	<img src="{{ art.path | prepend: site.baseurl }}" >
+</center>
+{% endfor %}

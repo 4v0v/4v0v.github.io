@@ -1,35 +1,13 @@
 url: ""
 baseurl: ""
-title: "4v0v's website"
+title: "4v0v"
 
 defaults:
   - scope:
-      path: "assets/drawings"
+      path: "assets/art"
     values:
-      is_drawing: true
-
-
-# title: 4v0v
-# baseurl: 
-# url: https://4v0v.github.io
-# markdown: kramdown
-# highlighter: rouge
-# kramdown:
-#   parse_block_html: true
-# sass:
-#   style: compressed
-# plugins:
-
-# navigation:
-#   - text: Acceuil
-#     url: /
-#     urlwithouthtml: /
-#   - text: Articles
-#     url: /articles.html
-#     urlwithouthtml: /articles
-#   - text: Liens
-#     url: /liens.html
-#     urlwithouthtml: /liens
-#   - text: Art
-#     url: /art.html
-#     urlwithouthtml: /art
+      is_art: true
+  - scope:
+      path: "assets/dev"
+    values:
+      is_dev: true
