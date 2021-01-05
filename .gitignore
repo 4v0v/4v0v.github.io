@@ -1,7 +1,7 @@
+.gitignore
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-.gitignore
 vendor
 *.bat
