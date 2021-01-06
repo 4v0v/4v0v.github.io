@@ -6,6 +6,8 @@ categories: lua
 author: 4v0v
 ---
 
+- [Collision Detection](http://www.jeffreythompson.org/collision-detection/table_of_contents.php)
+
 ## Schema de la librarie box2d
 <center><img src="/images/b2d.png" width="800"></center>
 
