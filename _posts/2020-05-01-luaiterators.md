@@ -7,6 +7,7 @@ categories: lua
 
 https://stackoverflow.com/questions/50748131/what-is-the-type-signature-of-pairs-in-lua
 https://pgl.yoyo.org/luai/i/next
+http://www.playwithlua.com/?p=62
 
 ## Iterateurs basique
 
