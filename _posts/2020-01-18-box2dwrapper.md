@@ -1,9 +1,6 @@
 ---
 layout: post
 title: Box2d et Wrapper
-date: 2019-05-12
-categories: lua
-author: 4v0v
 ---
 
 - [Collision Detection](http://www.jeffreythompson.org/collision-detection/table_of_contents.php)
@@ -18,4 +15,7 @@ Löve contient un module de physique basé sur le moteur physique Box2d.
 https://box2d.org/
 
 https://love2d.org/wiki/love.physics
+
+
+https://2dengine.com/?p=box2d
 
