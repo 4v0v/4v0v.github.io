@@ -5,7 +5,7 @@ title: "Random links"
 
 - [adnzzzzZ blog](https://github.com/adnzzzzZ/blog)
 - [2DENGINE](https://2dengine.com/?p=tutorials)
-http://www.playwithlua.com/
+- http://www.playwithlua.com/
 - [Sheepolution tutorials](http://sheepolution.com/learn/book/contents)
 - [Lua in 15mn](http://tylerneylon.com/a/learn-lua/)
 - [Montoux](http://francois-monthoux.ch/)
