@@ -11,3 +11,4 @@ http://www.playwithlua.com/
 - [Montoux](http://francois-monthoux.ch/)
 - [Juice it or lose it](https://www.youtube.com/watch?v=Fy0aCDmgnxg)
 - [The Nature of Code](https://natureofcode.com/book/introduction/)
+- https://www.youtube.com/watch?v=Kut0dirprmU
