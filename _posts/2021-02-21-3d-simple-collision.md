@@ -8,3 +8,5 @@ title: "3d Simple collision + animation"
 - https://blenderbits.wordpress.com/game-engine/graphics-gpu-acceleration/iqm-3d-animation/
 - https://github.com/groverburger/g3d/blob/master/g3d/collisions.lua
 - https://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/index.htm
+
+- https://love2d.org/forums/viewtopic.php?f=4&t=87722
