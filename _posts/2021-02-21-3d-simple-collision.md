@@ -14,3 +14,4 @@ title: "3d Simple collision + animation"
 - https://www.youtube.com/watch?v=ZzMnu3v_MOw
 - https://www.youtube.com/watch?v=F-kcaonjHf8
 - https://www.youtube.com/watch?v=WMiggUPst-Q&list=PLRIWtICgwaX0u7Rf9zkZhLoLuZVfUksDP&index=2
+- https://learnopengl.com/Advanced-OpenGL/Blending
