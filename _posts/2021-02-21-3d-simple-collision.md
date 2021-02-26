@@ -10,3 +10,6 @@ title: "3d Simple collision + animation"
 - https://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/index.htm
 
 - https://love2d.org/forums/viewtopic.php?f=4&t=87722
+
+- https://www.youtube.com/watch?v=ZzMnu3v_MOw
+- https://www.youtube.com/watch?v=F-kcaonjHf8
