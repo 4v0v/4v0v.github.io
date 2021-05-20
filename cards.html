@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% assign arts      = site.static_files | where: 'is_art', true %}
+{% assign row_count = arts | size | divided_by: 4 | floor %}
+
+{% for y in (0 .. row_count) %}
+	<div class="row hcenter">
+		{% for x in (0 .. 3) %}
+			{% assign current_item_idx = y | times: 4 | plus: x %}
+
+			{% if arts[current_item_idx] %}
+				{% capture card_img_src %} {{ arts[current_item_idx].path | prepend: site.baseurl }} {% endcapture %}
+				{% include card.html %}
+			{% else %}
+				<div class="card_empty mvs mhs"></div>
+			{% endif %}
+
+		{% endfor %}
+	</div>
+{% endfor %}

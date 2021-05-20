@@ -1,16 +1,16 @@
 * {
-	font-family: 'Courier New', Courier, monospace;
-	color: white;
+	font-family     : 'Courier New', Courier, monospace;
+	color           : white;
 	background-color: black;
 }
 
 .nav_links {
-	color: inherit;
+	color          : inherit;
 	text-decoration: none;
-	font-size: 1.5rem;
-	&.selected{
+	font-size      : 1.5rem;
+	&.selected {
 		background-color: violet;
-		color: black;
+		color           : black;
 	}
 }
 
@@ -19,4 +19,52 @@
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+.head_separator {
+	color: grey;
+}
+
+.card {
+	background : rgb(116, 116, 116); 
+	position   : relative;
+	width      : 200px; 
+	height     : 200px;
+	min-width  : 200px; 
+	min-height : 200px;
+}
+
+.card_empty {
+	background : rgba(0, 0, 0, 0); 
+	position   : relative;
+	width      : 200px; 
+	height     : 200px;
+	min-width  : 200px; 
+	min-height : 200px;
+}
+
+.card_header {
+	position        : absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	width           : inherit;
+	height          : 30px;
+}
+
+.card_footer {
+	position        : absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	width           : inherit;
+	height          : 30px;
+	bottom			 : 0;
+}
+
+.card_img {
+	width : 100%; 
+	height: 100%;
+}
+
+.card_text {
+	background-color: transparent; 
+	padding-left    : 10px; 
+	padding-top     : 5px;
 }
