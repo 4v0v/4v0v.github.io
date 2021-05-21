@@ -18,7 +18,7 @@ layout: default
 		{% for x in (1 .. card_by_row) %}
 			{% assign key = y | times: card_by_row | plus: x | minus: 1 %}
 
-			{% if cards[key] and cards[key].extname == ".png" %}
+			{% if cards[key] and (cards[key].extname == ".png" or cards[key].extname == ".jpg") %}
 				{% capture card_img_src  %} {{ cards[key].path | prepend: site.baseurl }} {% endcapture %}
 				{% capture card_img_name %} {{ cards[key].basename }}                     {% endcapture %}
 				{% include card_image.html %}
