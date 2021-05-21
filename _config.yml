@@ -8,6 +8,6 @@ defaults:
     values:
       is_art: true
   - scope:
-      path: "assets/dev"
+      path: "assets/videos"
     values:
-      is_dev: true
+      is_video: true

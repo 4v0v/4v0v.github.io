@@ -44,18 +44,18 @@
 }
 
 .card_header {
-	position        : absolute;
-	background-color: rgba(0, 0, 0, 0.5);
-	width           : inherit;
-	height          : 30px;
+	position   : absolute;
+	background : rgba(0, 0, 0, 0.5);
+	width      : inherit;
+	height     : 30px;
 }
 
 .card_footer {
-	position        : absolute;
-	background-color: rgba(0, 0, 0, 0.5);
-	width           : inherit;
-	height          : 30px;
-	bottom			 : 0;
+	position   : absolute;
+	background : rgba(0, 0, 0, 0.5);
+	width      : inherit;
+	height     : 30px;
+	bottom     : 0;
 }
 
 .card_img {
@@ -64,7 +64,19 @@
 }
 
 .card_text {
-	background-color: transparent; 
-	padding-left    : 10px; 
-	padding-top     : 5px;
+	background   : transparent; 
+	padding-left : 10px; 
+	padding-top  : 5px;
+}
+
+.card_video_icon {
+	position      : absolute;
+	width         : 0;
+	height        : 0;
+	left          : 50px;
+	top           : 50px;
+	border-top    : 50px solid transparent;
+	border-left   : 100px solid white;
+	border-bottom : 50px solid transparent;
+	background    : transparent;
 }
