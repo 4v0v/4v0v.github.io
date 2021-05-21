@@ -1,11 +1,13 @@
 <div class="card mvs mhs">
 	<div class="card_header"> 
-		<div class="card_text">Hello</div> 
+		<div class="card_text">{{card_vid_name}}</div> 
 	</div>
 
-	<div class="card_video_icon"></div>
+	<video class="card_video" 
+		poster      = {{card_vid_src}}
+		controls
+	>
+		<source src={{card_vid_src}} type="video/mp4">
+	</video>
 
-	<div class="card_footer"> 
-		<div class="card_text">World</div> 	
-	</div>
 </div> 

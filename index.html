@@ -2,9 +2,36 @@
 layout: default
 ---
 
-{% for post in site.posts %}
-	<div>
-		<i style="font-size: small;">{{ post.date | date_to_string | date: "%y%m%d" }}</i>
-		<a class="post_links" href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }} </a>
+{% assign card_by_row = 3 %}
+
+{% assign cards = site.static_files | where: 'is_card', true | reverse  %}
+{% assign mod   = cards | size | modulo: card_by_row %}
+
+{% if mod == 0 %}
+	{% assign row = cards | size | divided_by: card_by_row | floor | minus: 1 %}
+{% else %}
+	{% assign row = cards | size | divided_by: card_by_row | floor %}
+{% endif %}
+
+{% for y in (0 .. row) %}
+	<div class="row hcenter">
+		{% for x in (1 .. card_by_row) %}
+			{% assign key = y | times: card_by_row | plus: x | minus: 1 %}
+
+			{% if cards[key] and cards[key].extname == ".png" %}
+				{% capture card_img_src  %} {{ cards[key].path | prepend: site.baseurl }} {% endcapture %}
+				{% capture card_img_name %} {{ cards[key].basename }}                     {% endcapture %}
+				{% include card_image.html %}
+
+			{% elsif cards[key] and cards[key].extname == ".mp4" %}
+				{% capture card_vid_src  %} {{ cards[key].path | prepend: site.baseurl }} {% endcapture %}
+				{% capture card_vid_name %} {{ cards[key].basename }}                     {% endcapture %}
+				{% include card_video.html %}
+
+			{% else %}
+				{% include card_empty.html %}
+			{% endif %}
+
+		{% endfor %}
 	</div>
 {% endfor %}
