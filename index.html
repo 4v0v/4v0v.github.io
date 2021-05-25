@@ -18,14 +18,14 @@ layout: default
 		{% for x in (1 .. card_by_row) %}
 			{% assign key = y | times: card_by_row | plus: x | minus: 1 %}
 
-			{% if cards[key] and (cards[key].extname == ".png" or cards[key].extname == ".jpg") %}
+			{% if cards[key] and cards[key].extname == ".png" or cards[key].extname == ".jpg" %}
 				{% capture card_img_src  %} {{ cards[key].path | prepend: site.baseurl }} {% endcapture %}
-				{% capture card_img_name %} {{ cards[key].basename }}                     {% endcapture %}
+				{% capture card_img_name %} {{ cards[key].basename }} {% endcapture %}
 				{% include card_image.html %}
 
 			{% elsif cards[key] and cards[key].extname == ".mp4" %}
-				{% capture card_vid_src  %} {{ cards[key].path | prepend: site.baseurl }} {% endcapture %}
-				{% capture card_vid_name %} {{ cards[key].basename }}                     {% endcapture %}
+				{% capture card_vid_src  %} {{ cards[key].path | prepend: site.baseurl | append: '#t=0.2' }} {% endcapture %}
+				{% capture card_vid_name %} {{ cards[key].basename }} {% endcapture %}
 				{% include card_video.html %}
 
 			{% else %}
