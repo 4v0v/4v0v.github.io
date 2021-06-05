@@ -2,34 +2,30 @@
 layout: default
 ---
 
+{% assign cards       = site.static_files | where: 'is_card', true | reverse %}
+{% assign cards_count = cards | size %}
 {% assign card_by_row = 3 %}
+{% assign rows        = cards_count | divided_by: card_by_row | floor %}
 
-{% assign cards = site.static_files | where: 'is_card', true | reverse  %}
-{% assign mod   = cards | size | modulo: card_by_row %}
-
-{% if mod == 0 %}
-	{% assign row = cards | size | divided_by: card_by_row | floor | minus: 1 %}
-{% else %}
-	{% assign row = cards | size | divided_by: card_by_row | floor %}
-{% endif %}
-
-{% for y in (0 .. row) %}
+{% for y in (0 .. rows) %}
 	<div class="row hcenter">
 		{% for x in (1 .. card_by_row) %}
 			{% assign key = y | times: card_by_row | plus: x | minus: 1 %}
-
-			{% if cards[key] and cards[key].extname == ".png" or cards[key].extname == ".jpg" %}
+			{% assign ext = cards[key].extname %}
+			
+			{% if ext == ".png" or ext == ".jpg" %}
 				{% capture card_img_src  %} {{ cards[key].path | prepend: site.baseurl }} {% endcapture %}
-				{% capture card_img_name %} {{ cards[key].basename }} {% endcapture %}
+				{% capture card_img_name %} {{ cards[key].basename                     }} {% endcapture %}
 				{% include card_image.html %}
 
-			{% elsif cards[key] and cards[key].extname == ".mp4" %}
-				{% capture card_vid_src  %} {{ cards[key].path | prepend: site.baseurl | append: '#t=0.2' }} {% endcapture %}
-				{% capture card_vid_name %} {{ cards[key].basename }} {% endcapture %}
+			{% elsif ext == ".mp4" %}
+				{% capture card_vid_src  %} {{ cards[key].path | prepend: site.baseurl }} {% endcapture %}
+				{% capture card_vid_name %} {{ cards[key].basename                     }} {% endcapture %}
 				{% include card_video.html %}
 
 			{% else %}
 				{% include card_empty.html %}
+
 			{% endif %}
 
 		{% endfor %}
