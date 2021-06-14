@@ -2,32 +2,36 @@
 layout: default
 ---
 
-{% assign cards       = site.static_files | where: 'is_card', true | reverse %}
-{% assign cards_count = cards | size %}
-{% assign card_by_row = 3 %}
-{% assign rows        = cards_count | divided_by: card_by_row | floor %}
+{% assign cards         = site.static_files | where: 'is_card', true | reverse %}
 
-{% for y in (0 .. rows) %}
-	<div class="row hcenter">
-		{% for x in (1 .. card_by_row) %}
-			{% assign key = y | times: card_by_row | plus: x | minus: 1 %}
-			{% assign ext = cards[key].extname %}
-			
-			{% if ext == ".png" or ext == ".jpg" %}
-				{% capture card_img_src  %} {{ cards[key].path | prepend: site.baseurl }} {% endcapture %}
-				{% capture card_img_name %} {{ cards[key].basename                     }} {% endcapture %}
-				{% include card_image.html %}
+{% assign page_nb       = 0 %}
+{% assign item_per_page = 30 %}
+{% assign item_per_row  = 3 %}
+{% assign first_item    = item_per_page | times: page_nb %}
+{% assign last_item     = item_per_page | times: page_nb | plus: item_per_page | minus: 1 %}
 
-			{% elsif ext == ".mp4" %}
-				{% capture card_vid_src  %} {{ cards[key].path | prepend: site.baseurl }} {% endcapture %}
-				{% capture card_vid_name %} {{ cards[key].basename                     }} {% endcapture %}
-				{% include card_video.html %}
 
-			{% else %}
-				{% include card_empty.html %}
+{% for i in (first_item .. last_item) %}
+	{% assign row_div = i | modulo: item_per_row | plus: 1 %}
+	{% assign card    = cards[i] %}
+	{% assign ext     = card.extname %}
 
-			{% endif %}
+	{% if row_div == 1 %} <div class="row hcenter"> {% endif %}
 
-		{% endfor %}
-	</div>
+	{% if ext == ".png" or ext == ".jpg" %}
+		{% capture card_img_src  %} {{ card.path | prepend: site.baseurl }} {% endcapture %}
+		{% capture card_img_name %} {{ card.basename                     }} {% endcapture %}
+		{% include card_image.html %}
+
+	{% elsif ext == ".mp4" %}
+		{% capture card_vid_src  %} {{ card.path | prepend: site.baseurl }} {% endcapture %}
+		{% capture card_vid_name %} {{ card.basename                     }} {% endcapture %}
+		{% include card_video.html %}
+
+	{% else %}
+		{% include card_empty.html %}
+	{% endif %}
+
+	{% if row_div == item_per_row %} </div> {% endif %}
+
 {% endfor %}
