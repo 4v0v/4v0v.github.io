@@ -6,26 +6,6 @@
 			<div class="col-3"></div>
 			<div class="col-6">
 				<h2 class="hcenter">4v0v's website</h2>
-				<div class="hcenter">
-					<h6>
-						<a class="nav_links {% 
-							if page.url == '/' 
-							or page.url == '/1.html' 
-							or page.url == '/2.html' 
-							or page.url == '/3.html' 
-							or page.url == '/4.html' 
-							or page.url == '/5.html' 
-							or page.url == '/6.html' 
-							or page.url == '/7.html' 
-							or page.url == '/8.html' 
-							or page.url == '/9.html' 
-							or page.url == '/10.html'                     		%} selected {% endif %}" href="/index" >&nbsp;cards&nbsp;</a> 
-						<span class="nav_separator">|</span>
-						<a class="nav_links {% if page.url == '/blog.html'    %} selected {% endif %}" href="/blog"  >&nbsp;blog&nbsp;</a> 
-						<span class="nav_separator">|</span>
-						<a class="nav_links {% if page.url == '/contact.html' %} selected {% endif %}" href="/contact">&nbsp;contact&nbsp;</a> 
-					</h6>
-				</div>
 				<hr/>
 				{{ content }}
 				{% include footer.html %}
