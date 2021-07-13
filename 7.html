@@ -11,18 +11,11 @@ layout: default
 {% assign last_item     = item_per_page | times: page_nb | plus: item_per_page | minus: 1 %}
 
 <div class="hcenter">
-	<a class ="shs" href="index.html">0</a>
-	<a class ="shs" href="1.html">1</a>
-	<a class ="shs" href="2.html">2</a>
-	<a class ="shs" href="3.html">3</a>
-	<a class ="shs" href="4.html">4</a>
-	<a class ="shs" href="5.html">5</a>
-	<a class ="shs" href="6.html">6</a>
-	<span class="vcenter shs current_card_number">7</span>
-	<a class ="shs" href="8.html">8</a>
-	<a class ="shs" href="9.html">9</a>
-	<a class ="shs" href="10.html">10</a>
+	<a class ="shs" href="6.html"><</a>
+	<a class ="shs" href="8.html">></a>
 </div>
+
+<hr/>
 
 {% for i in (first_item .. last_item) %}
 	{% assign row_div = i | modulo: item_per_row | plus: 1 %}
@@ -48,3 +41,10 @@ layout: default
 	{% if row_div == item_per_row %} </div> {% endif %}
 
 {% endfor %}
+
+<hr/>
+
+<div class="hcenter">
+	<a class ="shs" href="6.html"><</a>
+	<a class ="shs" href="8.html">></a>
+</div>

@@ -1,11 +1,11 @@
-$container-width: 80vw;
-$spacing-unit: 2rem;
-$font-size: 1.2rem;
-$ttime: 0.2s;
+$container-width   : 80vw;
+$spacing-unit      : 2rem;
+$font-size         : 1.2rem;
+$ttime             : 0.2s;
 
 $breakpoint-desktop: "only screen and (min-width : 1200px)";
-$breakpoint-laptop:  "only screen and (max-width : 1200px)";
-$breakpoint-mobile:  "only screen and (max-width : 1200px)";
+$breakpoint-laptop : "only screen and (max-width : 1200px)";
+$breakpoint-mobile : "only screen and (max-width : 1200px)";
 
 * { box-sizing: border-box; }
 
@@ -17,17 +17,17 @@ html {
 }
 
 html, body {
-  margin: 0;
+  margin : 0;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, img, textarea, button, input, textarea, blockquote, code {
-  margin: 0;
+  margin : 0;
   padding: 0;
 }
 
 p, a, ul, li, blockquote p, button, input[type="text"], textarea, th, tr, td, table, thead, pre, code {
-  font-size: $font-size;
+  font-size  : $font-size;
   line-height: 1.75;
 }
 
@@ -56,14 +56,13 @@ code, pre {
 
 
 p code {
-  display: inline;
-  max-width: 100%;
-  border: 1px solid lighten(grey, 25%);
+  display         : inline;
+  max-width       : 100%;
+  border          : 1px solid lighten(grey, 25%);
   background-color: #f4f4f7;
-  padding: 3px;
-  //this'll bite me on the ass later...
-  opacity: 0.7;
-  width: auto;
+  padding         : 3px;
+  opacity         : 0.7;
+  width           : auto;
 }
 
 button {

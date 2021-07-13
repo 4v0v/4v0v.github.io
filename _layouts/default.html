@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-  <body>
+	<head>
+		<title>{{ page.title }}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | prepend: site.baseurl }}">
+		<link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}"/>
+	</head>
+	<body>
 		<div class="row mvs">
 			<div class="col-3"></div>
-			<div class="col-6">
-				<h2 class="hcenter">4v0v's website</h2>
-				<hr/>
-				{{ content }}
-				{% include footer.html %}
-			</div>
+			<div class="col-6">{{ content }}</div>
 			<div class="col-3"></div>
 		</div>
 	</body>
